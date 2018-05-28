@@ -12,7 +12,7 @@ include_once 'public/header.php';
     <table class="table table-striped table-hover text-center ">
 
                         
-        <label class="col-lg-12 text-center"><h1 class="h1">Todos los Productos</h1></label>
+        <label class="col-lg-12 text-center"><h1 class="h1 text-warning">Todos los Productos</h1></label>
             
        
         <?php

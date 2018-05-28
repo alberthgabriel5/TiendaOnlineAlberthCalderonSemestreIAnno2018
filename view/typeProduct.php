@@ -5,7 +5,7 @@
 <article>
    
     <form action="?controlador=typeProduct&accion=insertar" method="POST">
-        <input type="text" class="col-lg-6 input-lg" required name="articulo" id="articulo" value="" placeholder="Agregue el nombre de la Categoria" />
+        <input type="text" class="col-lg-6 text-center center-block input-lg" required name="articulo" id="articulo" value="" placeholder="Agregue el Nombre de la Categoria Nueva" />
         <a class="col-lg-1"></a>
     <input class="col-lg-2 btn btn-success btn-lg" type="submit" value="Agregar" id="Agregar" name="Agregar" />
     <br>
@@ -17,9 +17,9 @@
     <br>
     <br>
    
-    <table class="table table-striped table-hover text-center ">
+    <table class="table  table-hover text-center ">
         
-            <tr>                
+        <tr class="bg-info">                
                 <th class="col-lg-6 text-center">Item</th>
                 <th class="col-lg-2 text-center">Actualizar</th>
                 <th class="col-lg-2 text-center">Desactivar</th>

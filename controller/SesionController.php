@@ -1,13 +1,6 @@
 <?php
 
-/**
- * Description of SesionController
- *
- * @author "Alberth Calderón Alvarado" <albert.calderon@ucr.ac.cr>
- */
-class SesionController {
-   
-    
+class SesionController {    
     
     private $view;
     
@@ -23,7 +16,10 @@ class SesionController {
     } // listar
     
     public function salir(){
-    $_SESSION['idUser'] = 0;
+    if(isset($_SESSION['idUser'])){
+        $_SESSION['idUser']=0;
+        session_destroy();
+    }
     session_start();
     session_destroy();
     //header('location: ../index.php');
