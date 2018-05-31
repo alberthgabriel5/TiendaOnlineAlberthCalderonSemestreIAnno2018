@@ -16,6 +16,7 @@ class ItemsController {
     
     
     public function listar(){
+        session_start();
         require 'model/ItemsModel.php';
         $items=new ItemsModel();
         $data['listado']= $items->listar();

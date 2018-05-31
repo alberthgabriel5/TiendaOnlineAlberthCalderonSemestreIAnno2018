@@ -1,8 +1,14 @@
  
 <?php
 include 'public/header.php';
-//if (@session_start() == true) {
+@session_start();
+if (@session_start() == true) {
     if (isset($_SESSION["idUser"])) {
+        if($_SESSION["idUser"]==0){
+            echo 'registrate';
+        }
+            
+    
         ?>
 
 
@@ -29,13 +35,13 @@ include 'public/header.php';
                         <h3>inicio de sesi&oacute;n</h3>
                     </legend>
 
-                    <form role="form" class="form-horizontal">
+                    <form role="form" action="?controlador=Sesion&accion=start" enctype="multipart/form-data" method="POST" class="form-horizontal">
 
                         <div class="form-group">
-                            <label class="col-xs-12" for="usuario"><h4>Usuario</h4></label>
+                            <label class="col-xs-12" for="usuario"><h4>Usuario o E-mail</h4></label>
                             <div class="col-xs-10 col-xs-offset-1">
 
-                                <input type="text" id="usuario" class="form-control Input">
+                                <input type="text" id="usuario" name="usuario" class="form-control Input">
 
                             </div>
 
@@ -43,7 +49,7 @@ include 'public/header.php';
                         <div class="form-group">
                             <label class="col-xs-12" for="password"><h4>Password</h4></label>
                             <div class="col-xs-10 col-xs-offset-1">
-                                <input type="password" id="password" class="form-control col-xs-12 Input">
+                                <input type="password" id="password" name="password" class="form-control col-xs-12 Input">
                             </div>
 
                         </div>
@@ -102,6 +108,7 @@ include 'public/header.php';
     </div>
     </center>
     <?php
+    }
 }
 //}
 

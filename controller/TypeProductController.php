@@ -44,6 +44,12 @@ class TypeProductController {
         $id = $_POST['idType'];
         $result = $items->actualizar($id, $articulo);        
         $data['listado'] = $items->formular();
+        if ($result) {
+            $error= "Insertado exitoso";
+        } else {
+            $error= "Fallo en el proceso intentelo de nuevo";
+        }
+        //echo $error;
 
         $this->view->show("typeProduct.php", $data);
     }//actualozar

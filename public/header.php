@@ -13,8 +13,8 @@
         <link href="public/css/Login.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="container">
+        <div class="container-fluid" style="width:100%; height:100%; min-height: max-content;}" >
+            <div class="container" >
 
                 <div class="row">
                     <div class=" col-lg-12 center-block">  
@@ -25,7 +25,12 @@
                             <ul class="nav navbar-nav">
                                 <li class="active"><a href="index.php">Inicio</a></li>
                                 <?php
-                                if (@session_start() == true) {
+                                
+                                if (!@session_start() == true){
+                                    session_start();
+                                }    
+                                if(isset($_SESSION['idUser'])&&$_SESSION['rol']==1 )                              
+                                    {
                                     ?>
 
                                     <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
@@ -38,15 +43,25 @@
                                             <!--                                    <li><a href="#">Submenu 1-3</a></li>-->
                                         </ul>
                                     </li>
-                                    <li >
-
-                                        <a href = "?controlador=Sesion&accion=salir">Salir</a>
-                                    <?php } else {
+                                    <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>
+                                    <?php } else if(isset($_SESSION['idUser'])&&$_SESSION['rol']==2) {
                                         ?>
-                                        <a href = "?controlador=Sesion&accion=inicio">Ingresar</a>
+                                    <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
+                                    <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>
                                         <?php
+                                    }if(!isset($_SESSION['idUser'])||$_SESSION['idUser']==0){
+                                        ?>
+                                    <li class="dropdown">
+                                        <a class="dropdown-toggle" data-toggle="dropdown" href="?controlador=Product&accion=listar">Ingresar
+                                            <span class="caret"></span></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href = "?controlador=Sesion&accion=inicio">Ingresar</a></li>
+                                            <li><a href = "?controlador=Sesion&accion=registro">Registrar</a></li>
+                                        </ul>
+                                    </li>
+                                    <?php
                                     }
-                                    ?></li>
+                                    ?>
                             </ul>
                         </nav>
                     </div>

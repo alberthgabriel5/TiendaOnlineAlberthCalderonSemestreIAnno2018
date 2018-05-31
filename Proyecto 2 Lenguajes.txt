@@ -1,0 +1,53 @@
+Universidad de Costa Rica 
+Sede del Atlántico 
+Lenguajes para Aplicaciones Comerciales 
+ 
+Proyecto 2 
+I Semestre 2018 
+Valor % 
+ 
+Profesor: 
+Nelson Méndez Montero 
+Tienda Online 
+ 
+Descripción 
+ 
+Una tienda de artículos tecnológicos (teléfonos, computadoras, pantallas, etc.) requiere un sistema web que les permita ofrecer y vender los artículos a los clientes. La tienda no posee un local físico por lo que todas las ventas se realizan a través del sistema. El sistema online de la tienda tendrá dos modos de funcionamiento administrativo (modulo donde el administrador puede gestionar todo lo pertinente a su tienda online) y ventas (sitio al que aceden los clientes para comprar)  
+ 
+Especificaciones modulo administrativo 
+• El administrador podrá registrar otros usuarios administradores para que hagan uso del sitio en modo administrativo, de igual manera podrá deshabilitarlos, esto quiere decir que hay un usuario administrativo con privilegios (puede crear y eliminar administradores), mientras que el resto de administradores solo pueden gestionar el sitio y no crear administradores. 
+• Todos los administradores podrán registras productos a ser vendidos en el sitio. Los artículos deben poseer mínimo los siguientes atributos nombre, precio, descripción e imagen. Y cada artículo debe pertenecer a una categoría, estas categorías serán creadas por el administrador.     
+• El sitio permitirá crear promociones de artículos (se podrán escoger artículos diferentes) y aplicarles a estos un descuento x (definido por el administrador). En la promoción aparecerá el precio real y el precio con descuento. La promoción tiene una fecha de creación y fecha de finalización. No pueden haber promociones del mismo artículo en un mismo rango de fechas. De manera automática la promoción estará disponible en el rango de fecha asignado y no será mostrada en una vez finalizada su fecha de vigencia. 
+• El administrador podrá ver un informe de todas la ventas que se han realizado en un mes y año determinado y también podrá ver este informe seleccionando un rango de fechas especificado (fecha de inicio y fecha de fin).   
+ 
+Especificaciones modulo ventas 
+• El sistema debe almacenar un registro de los clientes (nombre, contraseña, edad, género, etc.)  
+• Los clientes pueden comprar artículos y marcarlos como vistos o favoritos. 
+• Para realizar las comprar el usuario podrá hacer búsqueda de los artículos por el nombre o por la categoría. También deberá permitir ordenarlos por precio (ascendente y descendente). 
+• Para el caso de las comprar los usuarios pueden agregar artículos al carrito de compras en todo momento y esto no debe interferir en su proceso de comprar (debe poder seguir comprando y buscando artículos sin distracciones o inconvenientes, de igual forma podrá serrar sesión y no se debe perder los datos que tenía en el carrito una vez vuelva a ingresar al sitio). También podrá comprar el articulo de forma inmediata con la opción comprar (debe poder indicar la cantidad de artículos a comprar).  
+• Debe haber una función que permita ver el carrito y eliminar artículos, mascarlos para realizar la compra después y realizar el checkout de artículos y finalmente la compra y pago. 
+• Se debe hacer una simulación del pago con tarjeta de los artículos a 
+comprar 
+• Una vez realizada la comprar el cliente va a poder ver su historial de compras, por lo que debe quedar registrada la venta. 
+• El sistema debe ser capaz de poder sugerir artículos a los clientes de alguna forma, tomando en cuenta el historial de comprar del usuario (esta debe ser mostrado en alguna parte del sitio).  
+ 
+Requisitos: 
+• Se debe implementar el proyecto con HTML5, CSS3 y JavaScript (JQuery), Bootstrap, AJAX, PHP (MVC-FrontController), MySQL (usar procedimientos almacenados y manejo de transacciones de ser necesario y consultas optimizadas) 
+• El sitio debe ser Responsive 
+• Cumplir con los estándares de programación vistos en clase, el incumplimiento de alguno resultará en la rebaja de 10pts de manera automática. 
+• Se debe utilizar POO 
+• Se debe investigar sobre el manejo seguro de datos de los usuario para los atributos que lo requieran 
+• El 	nombre 	del 	proyecto 	tiene 	que 	tener 	la 	forma: 
+NombreProyectoNombreEstudianteSemestreIAnno2018 
+• Fecha de entrega:  30 de mayo de 2018 
+• Cada estudiante tendrá una cita para revisión de proyecto, es requisito fundamental ser puntuales con la hora de entrega (estar 5 minutos antes en el lab). 
+• Si él estudiante quiere utilizar algún otro tipo de librería o tecnología debe conversar con el profesor para su respectiva aprobación 
+• Deben subir el proyecto a Mediación para tener derecho a la revisión 
+ 
+ 
+Notas finales: 
+• Cualquier copia de proyecto o código se sancionará según el REGLAMENTO INTERNO DE LA UCR, además de tener un cero automático en el proyecto. 
+• El proyecto se realiza de forma individual 
+• El proyecto debe estar alojado en un servidor 
+ 
+ 
