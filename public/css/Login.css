@@ -5,8 +5,8 @@
 
 .container-fluid{
     background-image: url(../img/7strandsofmatter.jpg);
-    /*background-size:cover;*/
-    /*background-repeat: no-repeat;*/
+    background-size:cover;
+    background-repeat: no-repeat;
     background-attachment:fixed;
     min-height: max-content;
 }

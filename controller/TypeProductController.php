@@ -10,6 +10,7 @@ class TypeProductController {
     
     public function __construct() {
         $this->view=new View();
+        
     } // constructor
     
     
@@ -64,5 +65,11 @@ class TypeProductController {
         $this->view->show("typeProduct.php", $data);
     }//actualozar
     
-    
+    public function categoria(){
+        require 'model/TypeProductModel.php';
+        $items=new TypeProductModel();
+        $id = $_POST['idType'];
+        $data['listado']= $items->tipar($id);
+        $this->view->show("all_product.php", $data);
+    } // listar
 }

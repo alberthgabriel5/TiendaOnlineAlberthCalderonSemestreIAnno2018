@@ -21,7 +21,7 @@ class SesionModel {
         $consulta->execute();
         $resultado=$consulta->fetchAll();
         $consulta->closeCursor();//no olvidadar cerrar el cursor 
-        
+    
         return $resultado;
-    }
+}
 }

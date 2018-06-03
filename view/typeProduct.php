@@ -69,7 +69,7 @@ include_once 'public/header.php';
 
 
                 <form action="?controlador=typeProduct&accion=categoria" method="POST">
-                    <input type="hidden" id="idType2" name="idType3" value='<?php echo $value[0]; ?>'>
+                    <input type="hidden" id="idType" name="idType" value='<?php echo $value[0]; ?>'>
                     <div class="col-lg-2"> <input  class="col-lg-10 btn btn-info" type="submit" id="delete" name="delete" value=<?php echo $value[1]; ?> /></div>
                     
                 </form>

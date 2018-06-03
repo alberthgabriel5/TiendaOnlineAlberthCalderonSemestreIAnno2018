@@ -1,19 +1,7 @@
  
 <?php
 include 'public/header.php';
-@session_start();
-if (@session_start() == true) {
-    if (isset($_SESSION["idUser"])) {
-        if($_SESSION["idUser"]==0){
-            echo 'registrate';
-        }
-            
-    
-        ?>
 
-
-        <?php
-    } else {
 //        <link href="public/css/Login.css" rel="stylesheet" type="text/css"/>
         ?>
 
@@ -108,8 +96,8 @@ if (@session_start() == true) {
     </div>
     </center>
     <?php
-    }
-}
+   
+
 //}
 
 include 'public/footer.php';

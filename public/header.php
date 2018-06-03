@@ -13,7 +13,7 @@
         <link href="public/css/Login.css" rel="stylesheet" type="text/css"/>
     </head>
     <body>
-        <div class="container-fluid" style="width:100%; height:100%; min-height: max-content;}" >
+        <div class="container-fluid" style="width:100%; height:100%; min-height: max-content;" >
             <div class="container" >
 
                 <div class="row">
@@ -26,13 +26,35 @@
                                 <li class="active"><a href="index.php">Inicio</a></li>
                                 <?php
                                 
-                                if (!@session_start() == true){
+                                if (!@session_start() == true) {
                                     session_start();
-                                }    
-                                if(isset($_SESSION['idUser'])&&$_SESSION['rol']==1 )                              
-                                    {
+                                    
+                                }
+                                
+                                
+                                
+                                if (isset($_SESSION['idUser'])){                             
+                                    
+                                     if (!isset($_SESSION['rol'])){
+                                         $_SESSION['rol'] = 0;
+                                     }                                   
+                                    
+                                    if( $_SESSION['rol'] == 1) {
+                                
+                                    
+                                    if ($_SESSION['idUser'] == -22) {
+                                        ?> 
+                                        <li ><a href="?controlador=User&accion=formular">Administradores</a></li>
+                                        <?php
+                                    }else{
+                                        
+                                        ?> 
+                                        <li ><a href="?controlador=User&accion=formular">Cuenta</a></li>
+                                        <?php
+                                    }
                                     ?>
 
+                                    <li ><a href="?controlador=User&accion=listar">Clientes</a></li>                                    
                                     <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="?controlador=Product&accion=listar">Productos
@@ -44,12 +66,14 @@
                                         </ul>
                                     </li>
                                     <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>
-                                    <?php } else if(isset($_SESSION['idUser'])&&$_SESSION['rol']==2) {
-                                        ?>
+                                    <?php } else if($_SESSION['rol']==2) {
+                                        ?>                                     
+                                        <li ><a href="?controlador=User&accion=formular">Cuenta</a></li>
+                                        
                                     <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
                                     <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>
                                         <?php
-                                    }if(!isset($_SESSION['idUser'])||$_SESSION['idUser']==0){
+                                }else{
                                         ?>
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="?controlador=Product&accion=listar">Ingresar
@@ -60,7 +84,7 @@
                                         </ul>
                                     </li>
                                     <?php
-                                    }
+                                }}
                                     ?>
                             </ul>
                         </nav>

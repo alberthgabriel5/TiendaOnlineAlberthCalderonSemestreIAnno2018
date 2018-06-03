@@ -28,6 +28,15 @@ class TypeProductModel {
         
         return $resultado;
     }//listar
+     public function tipar($id){
+        $consulta= $this->db->prepare("CALL sp_listar_by_tipo('$id');");
+        $consulta->execute();
+        $resultado=$consulta->fetchAll();
+        $consulta->closeCursor();//no olvidadar cerrar el cursor
+        
+        return $resultado;
+    }//listar
+    
      public function insertar($articulo){
         $consulta= $this->db->prepare("CALL sp_insert_tipo_producto ('$articulo');");
         $consulta->execute();
