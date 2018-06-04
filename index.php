@@ -3,6 +3,6 @@
     require 'libs/FrontController.php';
     FrontController::main();
 
-//session_start();
+$_SESSION['idUser']
 
 ?>

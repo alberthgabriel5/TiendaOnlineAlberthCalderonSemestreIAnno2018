@@ -28,7 +28,8 @@
                                 
                                 if (!@session_start() == true) {
                                     session_start();
-                                    
+                                    $_SESSION['rol']=0;
+                                    $_SESSION['idUser']=0;
                                 }
                                 
                                 
@@ -73,7 +74,8 @@
                                     <li ><a href="?controlador=TypeProduct&accion=listar">Categoria</a></li>
                                     <li><a href = "?controlador=Sesion&accion=salir">Salir</a></li>
                                         <?php
-                                }else{
+                                }}
+                                else{
                                         ?>
                                     <li class="dropdown">
                                         <a class="dropdown-toggle" data-toggle="dropdown" href="?controlador=Product&accion=listar">Ingresar
@@ -84,7 +86,7 @@
                                         </ul>
                                     </li>
                                     <?php
-                                }}
+                                }
                                     ?>
                             </ul>
                         </nav>
