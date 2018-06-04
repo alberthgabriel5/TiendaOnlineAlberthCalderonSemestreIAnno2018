@@ -20,9 +20,8 @@ include_once 'public/header.php';
         foreach ($vars['listado'] as $key => $value) {
             ?>         
             
-                <div class="col-lg-4">    
-                    <form action="?controlador=Product&accion=update" method="POST">       
-
+                <div class="col-lg-3">    
+                    <form action="?controlador=Product&accion=actualizar" method="POST">       
                         <img class="col-lg-12 " alt="Imagen de Producto"  src="<?php echo $value[5]; ?>">                    
                         <input type="hidden" id="idType" name="idType" value='<?php echo $value[0]; ?>'>
                         <label class="label-default col-lg-8 text-center" ><?php echo $value[1]; ?></label>
@@ -30,13 +29,13 @@ include_once 'public/header.php';
                         <input class="col-lg-4 btn btn-success text-left" type="submit" id="update" name="update" value="Actualizar" />
                     </form>
                     <form action="?controlador=Product&accion=delete" method="POST">
-                        <input type="hidden" id="idType2" name="idType2" value='<?php echo $value[0]; ?>'>
+                        <input type="hidden" id="idType" name="idType" value='<?php echo $value[0]; ?>'>
                         <input  class="col-lg-4 btn btn-danger text-left" type="submit" id="delete" name="delete" value="Eliminar" />
                     </form>
-                    <form action="?controlador=Product&accion=compra" method="POST">
-                        <input type="hidden" id="idType2" name="idType3" value='<?php echo $value[0]; ?>'>
+<!--                    <form action="?controlador=Product&accion=compra" method="POST">
+                        <input type="hidden" id="idType" name="idType" value='<?php echo $value[0]; ?>'>
                        <input  class="col-lg-4 btn btn-success text-center" type="submit" id="compra" name="compra" value="Comprar" />
-                    </form>
+                    </form>-->
                 </div>
 
             </tr>

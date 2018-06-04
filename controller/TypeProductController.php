@@ -10,6 +10,9 @@ class TypeProductController {
     
     public function __construct() {
         $this->view=new View();
+        if(!isset($_SESSION['idUser'])){
+        session_start();
+    }
         
     } // constructor
     
